@@ -9,4 +9,8 @@ class Game {
   checkForWin() {
 
   }
+
+  resetGame() {
+    
+  }
 }
