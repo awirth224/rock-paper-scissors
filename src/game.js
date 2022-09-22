@@ -21,6 +21,7 @@ class Game{
   }
 
   takeTurnClassic() {
+    if(event.target.id)
 
   }
 
