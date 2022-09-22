@@ -1,7 +1,7 @@
 class Game {
   constructor() {
-    this.cat = new Player ('Cat', )
-    this.dog = new Player ('Dog')
+    this.cat = new Player ('Cat', token, icon)
+    this.dog = new Player ('Dog', token, icon)
     this.classicIcons = [
       './assets/happy-rocks.png',
       '.assets/happy-paper.png',
