@@ -3,7 +3,8 @@ class Player {
     this.playerName = name
     this.token = token
     this.wins = 0
-    this.choice = icon || getRandomIcon()
+    this.choiceClassic = icon || getRandomIcon(this.choicesClassic)
+    this.choiceDifficult = icon || getRandomIndex(this.choicesDifficult)
     this.choicesClassic = ['rock', 'paper', 'scissors']
     this.choicesDifficult = ['rock', 'paper', 'scissors', 'alien', 'lizard']
     /*Lizard beats paper and scissors, loses to rock and alien
@@ -15,6 +16,7 @@ class Player {
   }
 
   takeTurnClassic() {
+    
 
   }
 
