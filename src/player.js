@@ -3,8 +3,7 @@ class Player {
     this.playerName = name
     this.token = token
     this.wins = 0
-    this.choiceClassic = choice
-    this.choiceDifficult = choice
+    this.choice = choice
   }
 
   getRandomIcon(array) {
