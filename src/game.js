@@ -2,30 +2,26 @@ class Game{
   constructor() {
     this.cat = new Player('Cat', token, choice)
     this.dog = new Player('Dog', token, choice)
-    this.classic = ['rock', 'paper', 'scissors']
-    this.difficult = ['rock', 'paper', 'scissors', 'alien', 'lizard']
+    this.options = ['rock', 'paper', 'scissors', 'alien', 'lizard']
+    this.winOptions = {
+      rock: [scissors,lizard],
+      paper: [rock,alien],
+      scissors:[paper],
+      alien:[lizard,rock],
+      lizard:[paper, scissors]
+    } 
+  }
+
       /*Lizard beats paper and scissors, loses to rock and alien
       Alien beats lizard and rock, loses to paper and scissors */
-    this.classicIcons = [
-      './assets/happy-rocks.png',
-      './assests/happy-paper.png',
-      '.assets/happy-scissors.png'
-    ]
-    this.difficultIcons = [
-      './assets/happy-rocks.png',
-      './assests/happy-paper.png',
-      '.assets/happy-scissors.png',
-      './assets/happy-alien.png',
-      './assets/lizard.png'
-    ]
+
+  takeTurnClassic(choice) {
+    this.cat.choiceClassic = choice 
+    this.dog.choiceClassic = this.dog.getRandomIcon(this.options)
   }
 
-  takeTurnClassic() {
-    if(event.target.id)
 
-  }
-
-  takeTurnDifficult() {
+  checkWins() {
 
   }
 }
