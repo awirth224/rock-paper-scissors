@@ -17,13 +17,16 @@ difficultGame.addEventListener('click', difficultGame)
 
 
 //functions
-function classicGame(){
+function classicGame() {
   gameArea.classList.add('hidden')
+  toggle(chooseFighter)
   classicIcons.classList.remove('hidden')
+  changingTitle.innerText += 'Choose Your Fighter'
 }
 
 
-function difficultGame(){
+
+function difficultGame() {
   classicGame()
   lizardAlien.classList.remove('hidden')
 
