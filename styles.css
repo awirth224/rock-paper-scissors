@@ -4,9 +4,9 @@ body {
   height: 100vh;
 }
 
-.hidden{
+/* .hidden{
   display: none;
-}
+} */
 
  /* Player 'Cat' section */
 .left {
@@ -39,27 +39,52 @@ button {
 }
 
 .game-area {
+  align-content: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.classic {
+  align-items: center;
+  border: solid 3px rebeccapurple;
+  font-size: 20px;
+  width: 220px;
+}
+
+.difficult {
+  border: solid 3px rebeccapurple;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  /* height: 100%; */
+  justify-content: flex-start;
+  width: 220px;
 }
 
 .choose-fighter {
+  align-content: center;
+  border: solid 3px rebeccapurple;
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
+  height:400px;
   justify-content: space-around;
+  width: 100%;
 }
 
 img {
-  height:200px;
-  width: 200px;
+  height:150px;
+  justify-content: center;
+  width: 150px;
 }
 
 /* Player 'Dog' section */
 .right {
+  align-items: center;
   border: solid 3px purple;
   display: flex;
+  flex-direction: column;
   grid-column-start: 3;
+  justify-content: flex-start;
 }
