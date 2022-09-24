@@ -5,20 +5,28 @@ body {
 }
  /* Player 'Cat' section */
 .left {
+  border: solid 3px purple;
   grid-column-start: 1;
   grid-row-start: 1;
 }
 
 /* Main section */
 .middle {
+  border: solid 3px green;
+  align-content: space-between;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   grid-column-start: 2;
   grid-row-start: 1;
+  justify-content: center;
 }
 
 .title {
+  border: solid 3px blue;
+  align-items: flex-start;
+  justify-items: center;
+
 
 }
 .choose-fighter {
@@ -35,6 +43,7 @@ img {
 
 /* Player 'Dog' section */
 .right {
+  border: solid 3px purple;
   grid-column-start: 3;
   grid-row-start: 1;
 }
