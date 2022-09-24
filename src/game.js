@@ -1,7 +1,7 @@
 class Game{
   constructor() {
-    this.cat = new Player('Cat', 😸, choice)
-    this.dog = new Player('Dog', 🐶, choice)
+    this.cat = new Player('Cat', token, choice)
+    this.dog = new Player('Dog', token, choice)
     this.optionsClassic = ['rock', 'paper', 'scissors']
     this.optionsDifficult = ['rock', 'paper', 'scissors', 'alien', 'lizard']
   }
@@ -21,7 +21,7 @@ class Game{
 
   checkWins() {
     if (this.cat.choice === 'rock' && this.dog.choice === 'scissors' ) {
-      this.cat.wins +=
+       this.cat.wins +=
     }
     else if (this.cat.choice === 'paper' && this.dog.choice === 'scissors') {
       this.dog.wins +=
