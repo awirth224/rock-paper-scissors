@@ -7,6 +7,7 @@ var playersChoices = document.querySelector('.display-game')
 var classicGame = document.querySelector('.classic')
 var difficultGame = document.querySelector('.difficult')
 var lizardAlien = document.querySelector('.icon')
+var classicIcons = document.querySelectorAll('.classic-icon')
 
 //eventListeners
 //one on game choice- classic or difficult
@@ -18,7 +19,7 @@ difficultGame.addEventListener('click', difficultGame)
 //functions
 function classicGame(){
   gameArea.classList.add('hidden')
-  chooseFighter.classList.remove('hidden')
+  classicIcons.classList.remove('hidden')
 }
 
 
