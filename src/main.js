@@ -1,5 +1,6 @@
 //querySelectors
-var winDisplay = document.querySelector('.wins')
+var catWins = document.querySelector('.cat-wins')
+var dogWins = document.querySelector('.dog-wins')
 var changingTitle = document.querySelector('.change-game-display')
 var gameArea = document.querySelector('.game-area')
 var chooseFighter = document.querySelector('.choose-fighter')
@@ -14,7 +15,8 @@ var classicIcons = document.querySelectorAll('.classic-icon')
 classicGame.addEventListener('click', classicGame)
 difficultGame.addEventListener('click', difficultGame)
 
-
+//global variables
+currentGame = new Game ()
 
 //functions
 function classicGame() {
@@ -29,11 +31,13 @@ function classicGame() {
 function difficultGame() {
   classicGame()
   lizardAlien.classList.remove('hidden')
+  changingTitle.innerText += 'Choose Your Fighter'
 
 }
 
 
 function updateWinDisplay() {
-
+  catWins.innerHTML += `Wins: ${this.cat.wins}`
+  dogWins.innerHTML += `Wins: ${this.dog.wins}`
 }
 
