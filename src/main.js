@@ -16,13 +16,13 @@ difficultGame.addEventListener('click', difficultGame)
 
 
 //functions
-function classicGame() {
+function classicGame(){
   gameArea.classList.add('hidden')
   chooseFighter.classList.remove('hidden')
 }
 
 
-function difficultGame() {
+function difficultGame(){
   classicGame()
   lizardAlien.classList.remove('hidden')
 

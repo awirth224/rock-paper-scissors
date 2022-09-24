@@ -21,7 +21,7 @@ class Game{
 
   checkWins() {
     if (this.cat.choice === 'rock' && this.dog.choice === 'scissors' ) {
-       this.cat.wins +=
+       this.cat.wins += 
     }
     else if (this.cat.choice === 'paper' && this.dog.choice === 'scissors') {
       this.dog.wins +=
