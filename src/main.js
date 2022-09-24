@@ -16,7 +16,7 @@ difficultGame.addEventListener('click', difficultGame)
 
 
 //functions
-classicGame() {
+classicGame(){
   gameArea.classList.add('hidden')
   chooseFighter.classList.remove('hidden')
 }
