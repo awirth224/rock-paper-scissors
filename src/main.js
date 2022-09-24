@@ -1,6 +1,6 @@
 //querySelectors
 var h2 = document.querySelector('h2')
-
+var winDisplay = document.querySelector('.wins')
 
 
 //eventListeners
@@ -9,5 +9,7 @@ var h2 = document.querySelector('h2')
 
 
 //functions
+updateWinDisplay() {
 
+}
 
