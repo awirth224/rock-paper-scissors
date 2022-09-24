@@ -6,10 +6,6 @@ body {
   height: 100vh;
 }
 
-.hidden{
-  display: none;
-}
-
  /* Player 'Cat' section */
 .left {
   align-items: center;
@@ -112,4 +108,8 @@ img {
   flex-direction: column;
   grid-column-start: 3;
   justify-content: flex-start;
+}
+
+.hidden{
+  display: none;
 }
