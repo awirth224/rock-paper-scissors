@@ -21,7 +21,7 @@ button {
   border: solid 1px black;
   border-radius: 5px;
   height: 40px;
-  margin-top: 200px;
+  /* margin-top: 200px; */
   width: 150px
 }
 
@@ -55,11 +55,12 @@ button {
 
 .classic {
   align-items: center;
+  background-color: blueviolet;
   border: solid 3px rebeccapurple;
   display:flex;
   flex-direction: column;
   font-size: 18px;
-  height: 170px;
+  height: 220px;
   justify-content: center;
   margin-bottom: 6%;
   width: 230px;
@@ -67,11 +68,12 @@ button {
 
 .difficult {
   align-items: center;
+  background-color: blueviolet;
   border: solid 3px rebeccapurple;
   display: flex;
   flex-direction: column;
   font-size: 18px;
-  height: 200px;
+  height: 240px;
   justify-content: flex-start;
   margin-bottom: 5%;
   width: 230px;
