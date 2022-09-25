@@ -11,6 +11,7 @@ var classicGame = document.querySelector('.classic')
 var difficultGame = document.querySelector('.difficult')
 var lizardAlien = document.querySelector('.difficult-icon')
 var classicIcons = document.querySelectorAll('.classic-icon')
+var allIcons = document.querySelectorAll('.icon')
 var classicButton = document.querySelector('.play-classic')
 var difficultButton = document.querySelector('.play-difficult')
 
@@ -19,6 +20,14 @@ var difficultButton = document.querySelector('.play-difficult')
 //one on game choice- classic or difficult
 classicButton.addEventListener('click', classicGameDisplay)
 difficultButton.addEventListener('click', difficultGameDisplay)
+
+for(var i = 0; i < classicIcons.length; i++) {
+  classicIcons.addEventListener('click', classicGame)
+}
+
+for (var i = 0; i < allIcons.length; i++) {
+  allIcons.addEventListener('click', difficultGame)
+}
 
 
 //global variables
