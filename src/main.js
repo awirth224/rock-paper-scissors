@@ -9,11 +9,13 @@ var classicGame = document.querySelector('.classic')
 var difficultGame = document.querySelector('.difficult')
 var lizardAlien = document.querySelector('.icon')
 var classicIcons = document.querySelectorAll('.classic-icon')
+var classicButton = document.querySelector('.play-classic')
+var difficultButton = document.querySelector('.play-difficult')
 
 //eventListeners
 //one on game choice- classic or difficult
-classicGame.addEventListener('click', classicGame)
-difficultGame.addEventListener('click', difficultGame)
+classicButton.addEventListener('click', classicGame)
+difficultButton.addEventListener('click', difficultGame)
 
 //global variables
 currentGame = new Game()
@@ -21,7 +23,7 @@ currentGame = new Game()
 //functions
 function classicGame() {
   gameArea.classList.add('hidden')
-  classicIcons.classList.remove('hidden')
+  chooseFighter.classList.remove('hidden')
   changingTitle.innerText = 'Choose Your Fighter'
 }
 
@@ -30,7 +32,7 @@ function classicGame() {
 function difficultGame() {
   classicGame()
   lizardAlien.classList.remove('hidden')
-  changingTitle.innerText += 'Choose Your Fighter'
+  changingTitle.innerText = 'Choose Your Fighter'
 
 }
 
