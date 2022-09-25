@@ -1,7 +1,7 @@
 class Game{
   constructor() {
-    this.cat = new Player('Cat', 😸, choice)
-    this.dog = new Player('Dog', 🐶, choice)
+    this.cat = new Player('Cat', '😸')
+    this.dog = new Player('Dog', '🐶')
     this.optionsClassic = ['rock', 'paper', 'scissors']
     this.optionsDifficult = ['rock', 'paper', 'scissors', 'alien', 'lizard']
   }
