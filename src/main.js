@@ -2,7 +2,7 @@
 var catWins = document.querySelector('.cat-wins')
 var dogWins = document.querySelector('.dog-wins')
 var changingTitle = document.querySelector('.change-game-display')
-var gameArea = document.querySelector('.game-area')
+var clickGame = document.querySelector('.game-type')
 var chooseFighter = document.querySelector('.choose-fighter')
 var playersChoices = document.querySelector('.display-game')
 var classicGame = document.querySelector('.classic')
@@ -16,14 +16,13 @@ classicGame.addEventListener('click', classicGame)
 difficultGame.addEventListener('click', difficultGame)
 
 //global variables
-currentGame = new Game ()
+currentGame = new Game()
 
 //functions
 function classicGame() {
   gameArea.classList.add('hidden')
-  toggle(chooseFighter)
   classicIcons.classList.remove('hidden')
-  changingTitle.innerText += 'Choose Your Fighter'
+  changingTitle.innerText = 'Choose Your Fighter'
 }
 
 
