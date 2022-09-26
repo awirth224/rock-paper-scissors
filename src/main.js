@@ -5,62 +5,63 @@ var catChoiceDisplay = document.querySelector('.cat-choice')
 var dogChoiceDisplay = document.querySelector('.dog-choice')
 var changingTitle = document.querySelector('.change-game-display')
 var changeGameButton = document.querySelector('.change-game-button')
-var clickGame = document.querySelector('.game-type')
+//var clickGame = document.querySelector('.game-type')
 var chooseFighter = document.querySelector('.choose-fighter')
-var playersChoices = document.querySelector('.display-game')
+var playersChoices = document.querySelector('.display-choices')
 var classicGame = document.querySelector('.classic')
 var difficultGame = document.querySelector('.difficult')
-var lizardAlien = document.querySelector('.difficult-icon')
-var classicIcons = document.querySelectorAll('.classic-icon')
-var allIcons = document.querySelectorAll('.icon')
+var lizard = document.getElementById('lizard')
+var alien  = document.getElementById('alien')
+var rock = document.getElementById('rock')
+var paper = document.getElementById('paper')
+var scissors = document.getElementById('scissors')
+//var classicIcons = document.querySelectorAll('.classic-icon')
+//var allIcons = document.querySelectorAll('.icon')
 var classicButton = document.querySelector('.play-classic')
 var difficultButton = document.querySelector('.play-difficult')
-
+var gameArea = document.querySelector('.game-area')
 
 //eventListeners
-//one on game choice- classic or difficult
+
 classicButton.addEventListener('click', classicGameDisplay)
 difficultButton.addEventListener('click', difficultGameDisplay)
 
-for(var i = 0; i < classicIcons.length; i++) {
-  classicIcons.addEventListener('click', classicGame)
-}
-
-for (var i = 0; i < allIcons.length; i++) {
-  allIcons.addEventListener('click', difficultGame)
-}
-
-
 //global variables
-currentGame = new Game()
+var currentGame = new Game()
 
 //functions
+function addEventToIcons(icons) {
+  for (var i = 0; i < icons.length; i++) {
+    icons[i].addEventListener('click', function(event){
+      playGame(event.target.id);
+    })
+  }
+}
+
 function classicGameDisplay() {
   gameArea.classList.add('hidden')
   chooseFighter.classList.remove('hidden')
-  changeGameButton.classList.remove('hidden')
   changingTitle.innerText = 'Choose Your Fighter'
 }
 
 function difficultGameDisplay() {
-  classicGame()
-  lizardAlien.classList.remove('hidden')
-  changeGameButton.classList.remove('hidden')
-  changingTitle.innerText = 'Choose Your Fighter'
-
+  classicGameDisplay()
+  lizard.classList.remove('hidden')
+  alien.classList.remove('hidden')
+  
 }
 
-function classicGame() {
- //is this needed --> classicGameDisplay()
+function classicGame(event) {
+  addEventToIcons(classicIcons)
   currentGame.takeTurnClassic(event.target.id)
 }
 
-function difficultGame() {
-//is this needed -->  difficultGameDisplay()
-  currentGame.takeTurnDifficult(event.target.choice)
+function difficultGame(event) {
+  addEventToIcons(allIcons)
+  currentGame.takeTurnDifficult(event.target.id)
 }
 
-function displayCatChoice() {
+function displayCatChoice(event) {
   if (event.target.id === 'rock') {
     currentGame.cat.choice = 'rock'
     catChoiceDisplay.innerHTML = `<img src="./assets/happy-rocks.png" alt="happy-rocks">`
@@ -80,7 +81,7 @@ function displayCatChoice() {
   else if(event.target.id === 'lizard') {
     currentGame.cat.choice = 'lizard'
     catChoiceDisplay.innerHTML = `<img src="./assets/lizard.png" alt="lizard">`
-  } 
+  }
 }
 
 function displayDogChoice() {
@@ -101,11 +102,23 @@ function displayDogChoice() {
   }
 }
 
+function playGame(event) {
+  displayCatChoice(event)
+  displayDogChoice()
+  currentGame.checkWins()
+  updateWinDisplay()
+  displayChangeGameButton()
+}
+
+function displayChangeGameButton() {
+  if(currentGame.dog.wins > 0 || currentGame.cat.wins > 0) {
+    changeGameButton.classList.remove('hidden')
+  }
+}
 
 function updateWinDisplay() {
   catWins.innerHTML += `Wins: ${this.cat.wins}`
   dogWins.innerHTML += `Wins: ${this.dog.wins}`
 }
-
 
 
