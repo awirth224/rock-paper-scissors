@@ -15,6 +15,8 @@ var alien  = document.getElementById('alien')
 var rock = document.getElementById('rock')
 var paper = document.getElementById('paper')
 var scissors = document.getElementById('scissors')
+var allIcons = document.querySelectorAll('.icon')
+var difficultIcons = document.querySelectorAll('.difficult-icon')
 var classicButton = document.querySelector('.play-classic')
 var difficultButton = document.querySelector('.play-difficult')
 var gameArea = document.querySelector('.game-area')
@@ -24,11 +26,19 @@ var gameArea = document.querySelector('.game-area')
 classicButton.addEventListener('click', classicGameDisplay)
 difficultButton.addEventListener('click', difficultGameDisplay)
 
-rock.addEventListener('click', rocks)
-paper.addEventListener('click', papers, playGame)
-scissors.addEventListener('click',scissor, playGame)
-alien.addEventListener('click', aliens, playGame)
-lizard.addEventListener('click', lizards, playGame)
+for (var i = 0; i <allIcons.length; i++) {
+  allIcons[i].addEventListener('click', rocks)
+}
+
+for (var i = 0; i <difficultIcons; i++) {
+  difficultIcons[i].addEventListener('click', rocks)
+}
+
+// rock.addEventListener('click', rocks)
+// paper.addEventListener('click', papers, playGame)
+// scissors.addEventListener('click',scissor, playGame)
+// alien.addEventListener('click', aliens, playGame)
+// lizard.addEventListener('click', lizards, playGame)
 
 //global variables
 var currentGame = new Game()
@@ -66,21 +76,17 @@ function difficultGameDisplay() {
 //   currentGame.takeTurnDifficult(event.target.id)
 // }
 
-function rocks() {
-    console.log(currentGame.takeTurnCat('rock'))
-    console.log(currentGame.cat.choice)
-    // currentGame.cat.choice = 'rock'
-    // console.log(currentGame)
-    // displayCatChoice()
-    
-  // if (currentGame.gameType === 'classic') {
-  //   currentGame.takeTurnClassic(event.target.id)
-  //   playGame()
-  // }
-  // else if (currentGame.gameType === 'difficult') {
-  //   currentGame.takeTurnDifficult('rock')
-  //   playGame()
-  // }
+function rocks(event) {
+  if (currentGame.gameType === 'classic') {
+    currentGame.takeTurnCat(event.target.id)
+    currentGame.takeTurnDog()
+  }
+  else if (currentGame.gameType === 'difficult') {
+    currentGame.takeTurnCat(event.target.id)
+    currentGame.takeTurnDogDifficult()
+  }
+  //console.log(currentGame.takeTurnCat('rock'))
+  console.log(currentGame.cat.choice)
   
 }
 
