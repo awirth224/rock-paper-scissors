@@ -10,5 +10,4 @@ class Player {
     Math.floor(Math.random() * array.length)
   }
 
-
 }
