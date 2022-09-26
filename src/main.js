@@ -9,6 +9,7 @@ var chooseFighter = document.querySelector('.choose-fighter')
 var playersChoices = document.querySelector('.display-choices')
 var classicGame = document.querySelector('.classic')
 var difficultGame = document.querySelector('.difficult')
+
 var lizard = document.getElementById('lizard')
 var alien  = document.getElementById('alien')
 var rock = document.getElementById('rock')
@@ -23,11 +24,11 @@ var gameArea = document.querySelector('.game-area')
 classicButton.addEventListener('click', classicGameDisplay)
 difficultButton.addEventListener('click', difficultGameDisplay)
 
-rock.addEventListener('click', rock)
-paper.addEventListener('click', paper, playGame)
-scissors.addEventListener('click',scissors, playGame)
-alien.addEventListener('click', alien, playGame)
-lizard.addEventListener('click', lizard, playGame)
+rock.addEventListener('click', rocks)
+paper.addEventListener('click', papers, playGame)
+scissors.addEventListener('click',scissor, playGame)
+alien.addEventListener('click', aliens, playGame)
+lizard.addEventListener('click', lizards, playGame)
 
 //global variables
 var currentGame = new Game()
@@ -45,12 +46,14 @@ function classicGameDisplay() {
   gameArea.classList.add('hidden')
   chooseFighter.classList.remove('hidden')
   changingTitle.innerText = 'Choose Your Fighter'
+  currentGame.gameType = 'classic'
 }
 
 function difficultGameDisplay() {
   lizard.classList.remove('hidden')
   alien.classList.remove('hidden')
   classicGameDisplay()
+  currentGame.gameType = 'difficult'
 }
 
 // function classicGame(event) {
@@ -63,25 +66,32 @@ function difficultGameDisplay() {
 //   currentGame.takeTurnDifficult(event.target.id)
 // }
 
-function rock() {
-  paper.classList.add('hidden')
-  scissors.classList.add('hidden')
-  currentGame.cat.choice = 'rock'
+function rocks() {
+  console.log(currentGame.takeTurnClassic('rock'))
+  if (currentGame.gameType === 'classic') {
+    currentGame.takeTurnClassic('rock')
+    displayDogChoice()
+  }
+  else if (currentGame.gameType === 'difficult') {
+    currentGame.takeTurnDifficult('rock')
+    displayCatChoice()
+  }
+  
 }
 
-function paper() {
-  currentGame.cat.choice = 'paper'
+function papers() {
+  takeTurnClassic('paper')
 }
 
-function scissors() {
+function scissor() {
   currentGame.cat.choice = 'scissors'
 }
 
-function alien() {
+function aliens() {
   currentGame.cat.choice = 'alien'
 }
 
-function lizard() {
+function lizards() {
   currentGame.cat.choice = 'lizard'
 }
 
