@@ -6,6 +6,7 @@ var dogChoiceDisplay = document.querySelector('.dog-choice')
 var changingTitle = document.querySelector('.change-game-display')
 var changeGameButton = document.querySelector('.change-game-button')
 //var clickGame = document.querySelector('.game-type')
+var gameArea = document.querySelector('.game-area')
 var chooseFighter = document.querySelector('.choose-fighter')
 var playersChoices = document.querySelector('.display-choices')
 var classicGame = document.querySelector('.classic')
@@ -32,7 +33,7 @@ for (var i = 0; i < allIcons.length; i++) {
 
 
 //global variables
-currentGame = new Game()
+var currentGame = new Game()
 
 //functions
 function classicGameDisplay() {
