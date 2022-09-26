@@ -5,9 +5,9 @@ var catChoiceDisplay = document.querySelector('.cat-choice')
 var dogChoiceDisplay = document.querySelector('.dog-choice')
 var changingTitle = document.querySelector('.change-game-display')
 var changeGameButton = document.querySelector('.change-game-button')
-var clickGame = document.querySelector('.game-type')
+//var clickGame = document.querySelector('.game-type')
 var chooseFighter = document.querySelector('.choose-fighter')
-var playersChoices = document.querySelector('.display-game')
+var playersChoices = document.querySelector('.display-choices')
 var classicGame = document.querySelector('.classic')
 var difficultGame = document.querySelector('.difficult')
 var lizardAlien = document.querySelector('.difficult-icon')
@@ -101,6 +101,11 @@ function displayDogChoice() {
   }
 }
 
+function displayChangeGameButton() {
+  if(currentGame.dog.wins > 0 || currentGame.cat.wins > 0) {
+    changeGameButton.classList.remove('hidden')
+  }
+}
 
 function updateWinDisplay() {
   catWins.innerHTML += `Wins: ${this.cat.wins}`
