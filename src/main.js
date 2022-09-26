@@ -19,18 +19,8 @@ var difficultButton = document.querySelector('.play-difficult')
 
 
 //eventListeners
-//one on game choice- classic or difficult
 classicButton.addEventListener('click', classicGameDisplay)
 difficultButton.addEventListener('click', difficultGameDisplay)
-
-for(var i = 0; i < classicIcons.length; i++) {
-  classicIcons.addEventListener('click', classicGame)
-}
-
-for (var i = 0; i < allIcons.length; i++) {
-  allIcons.addEventListener('click', difficultGame)
-}
-
 
 //global variables
 var currentGame = new Game()
@@ -38,6 +28,7 @@ var currentGame = new Game()
 //functions
 function classicGameDisplay() {
   gameArea.classList.add('hidden')
+  difficultGame.classList.add('hidden')
   chooseFighter.classList.remove('hidden')
   changeGameButton.classList.remove('hidden')
   changingTitle.innerText = 'Choose Your Fighter'
@@ -51,17 +42,26 @@ function difficultGameDisplay() {
 
 }
 
-function classicGame() {
- //is this needed --> classicGameDisplay()
+function addEventToIcons(icons) {
+  for (var i = 0; i < icons.length; i++) {
+    icons[i].addEventListener('click', difficultGame)
+  }
+}
+
+
+function classicGame(event) {
+  addEventToIcons(classicIcons)
   currentGame.takeTurnClassic(event.target.id)
+  //is this needed --> classicGameDisplay()
 }
 
-function difficultGame() {
-//is this needed -->  difficultGameDisplay()
+function difficultGame(event) {
+  addEventToIcons(allIcons)
   currentGame.takeTurnDifficult(event.target.choice)
+  //is this needed -->  difficultGameDisplay()
 }
 
-function displayCatChoice() {
+function displayCatChoice(event) {
   if (event.target.id === 'rock') {
     currentGame.cat.choice = 'rock'
     catChoiceDisplay.innerHTML = `<img src="./assets/happy-rocks.png" alt="happy-rocks">`
@@ -100,6 +100,15 @@ function displayDogChoice() {
   else if(currentGame.dog.choice === [4]) {
     dogChoiceDisplay.innerHTML = `<img src="./assets/lizard.png" alt="lizard">`
   }
+}
+
+
+function playGame(event) {
+  displayCatChoice(event)
+  displayDogChoice()
+  currentGame.checkWins()
+  updateWinDisplay()
+  displayChangeGameButton()
 }
 
 function displayChangeGameButton() {
