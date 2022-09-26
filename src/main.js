@@ -76,15 +76,27 @@ function displayCatChoice() {
   else if(event.target.id === 'lizard') {
     currentGame.cat.choice = 'lizard'
     catChoiceDisplay.innerHTML = `<img src="./assets/lizard.png" alt="lizard">`
-  }
-  
+  } 
 }
 
 function displayDogChoice() {
   if(currentGame.dog.choice === [0]) {
-    dogChoiceDisplay.innerHTML = ``
+    dogChoiceDisplay.innerHTML = `<img src="./assets/happy-rocks.png" alt="happy-rocks">`
+  }
+  else if(currentGame.dog.choice === [1]) {
+    dogChoiceDisplay.innerHTML = `<img src="./assets/happy-paper.png" alt="happy-paper">`
+  }
+  else if(currentGame.dog.choice === [2]) {
+    dogChoiceDisplay.innerHTML = `<img src="./assets/happy-scissors.png" alt="happy-scissors">`
+  }
+  else if(currentGame.dog.choice === [3]) {
+    dogChoiceDisplay.innerHTML = `<img src="./assets/happy-alien.png" alt="happy-alien">`
+  }
+  else if(currentGame.dog.choice === [4]) {
+    dogChoiceDisplay.innerHTML = `<img src="./assets/lizard.png" alt="lizard">`
   }
 }
+
 
 function updateWinDisplay() {
   catWins.innerHTML += `Wins: ${this.cat.wins}`
