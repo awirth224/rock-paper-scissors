@@ -66,21 +66,27 @@ function difficultGameDisplay() {
 //   currentGame.takeTurnDifficult(event.target.id)
 // }
 
-function rocks(event) {
-  console.log(currentGame)
-  if (currentGame.gameType === 'classic') {
-    currentGame.takeTurnClassic(event.target.id)
-    playGame()
-  }
-  else if (currentGame.gameType === 'difficult') {
-    currentGame.takeTurnDifficult('rock')
-    playGame()
-  }
+function rocks() {
+    console.log(currentGame.takeTurnCat('rock'))
+    console.log(currentGame.cat.choice)
+    // currentGame.cat.choice = 'rock'
+    // console.log(currentGame)
+    // displayCatChoice()
+    
+  // if (currentGame.gameType === 'classic') {
+  //   currentGame.takeTurnClassic(event.target.id)
+  //   playGame()
+  // }
+  // else if (currentGame.gameType === 'difficult') {
+  //   currentGame.takeTurnDifficult('rock')
+  //   playGame()
+  // }
   
 }
 
 function papers() {
-  currentGame.cat.choice = 'paper'
+  currentGame.takeTurnCat('rock')
+  console.log(currentGame.cat.choice)
 }
 
 function scissor() {

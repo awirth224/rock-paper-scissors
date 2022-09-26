@@ -1,5 +1,5 @@
 class Game{
-  constructor(gameType) {
+  constructor() {
     this.cat = new Player('Cat', '😸')
     this.dog = new Player('Dog', '🐶')
     this.gameType = 'difficult' || 'classic'
@@ -10,16 +10,22 @@ class Game{
       /*Lizard beats paper and scissors, loses to rock and alien
       Alien beats lizard and rock, loses to paper and scissors */
 
-  takeTurnClassic(choice) {
-    this.cat.choice = choice 
-    this.dog.choice = this.dog.getRandomIcon(this.optionsClassic)
+  takeTurnDog() { 
+    var randomIcon = this.dog.getRandomIcon(this.optionsClassic)
+    this.dog.choice = this.optionsClassic[randomIcon]
   }
 
-  takeTurnDifficult(choice) {
-    this.cat.choice = choice
-    this.dog.choice = this.dog.getRandomIcon(this.optionsDifficult)
-    
+  takeTurnDogDifficult() {
+    var randomIcon = this.dog.getRandomIcon(this.optionsDifficult) 
+    this.dog.choice = this.optionsDifficult[randomIcon]
   }
+
+  takeTurnCat(choice) {
+    this.cat.choice = choice 
+    return this.cat.choice
+  }
+
+
 
   checkWins() {
     if (this.cat.choice === 'rock' && this.dog.choice === 'scissors') {
