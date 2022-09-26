@@ -4,6 +4,7 @@ var dogWins = document.querySelector('.dog-wins')
 var catChoiceDisplay = document.querySelector('.cat-choice')
 var dogChoiceDisplay = document.querySelector('.dog-choice')
 var changingTitle = document.querySelector('.change-game-display')
+var changeGameButton = document.querySelector('.change-game-button')
 var clickGame = document.querySelector('.game-type')
 var chooseFighter = document.querySelector('.choose-fighter')
 var playersChoices = document.querySelector('.display-game')
@@ -37,13 +38,16 @@ currentGame = new Game()
 function classicGameDisplay() {
   gameArea.classList.add('hidden')
   chooseFighter.classList.remove('hidden')
+  changeGameButton.classList.remove('hidden')
   changingTitle.innerText = 'Choose Your Fighter'
 }
 
 function difficultGameDisplay() {
   classicGame()
   lizardAlien.classList.remove('hidden')
+  changeGameButton.classList.remove('hidden')
   changingTitle.innerText = 'Choose Your Fighter'
+
 }
 
 function classicGame() {
@@ -102,4 +106,6 @@ function updateWinDisplay() {
   catWins.innerHTML += `Wins: ${this.cat.wins}`
   dogWins.innerHTML += `Wins: ${this.dog.wins}`
 }
+
+
 
