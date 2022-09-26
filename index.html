@@ -8,7 +8,7 @@
     <section class="left">
       <h1>&#128568;</h1>
       <h2>Cat</h2>
-      <h3 class="wins">Wins: </h3>
+      <h3 class="cat-wins">Wins: </h3>
       <button class="hidden">Change Game</button>
     </section>
     <section class="middle">
@@ -22,8 +22,9 @@
             scissors > paper <br>
             paper > rock <br>
           </p>
-          <button>Play Classic!</button>
+          <button class="play-classic">Play Classic!</button>
         </div>
+      </section>
         <div class="difficult">
           <h3 class="game-type">Difficult Game</h3>
           <p>
@@ -33,24 +34,25 @@
             alien > rock & lizard <br>
             lizard > scissors & paper
           </p>
-          <button>Play Difficult</button>
+          <button class="play-difficult">Play Difficult</button>
         </div>
       </section>
-      <section class="choose-fighter">
-        <img src="./assets/happy-rocks.png" alt="happy-rocks" class="hidden classic-icon"> 
-        <img src="./assets/happy-paper.png" alt="happy-paper" class="hidden classic-icon">
-        <img src="./assets/happy-scissors.png" alt="happy-scissors" class="hidden classic-icon">
-        <img src="./assets/happy-alien.png" alt="happy-alien" class="hidden icon">
-        <img src="./assets/lizard.png" alt="lizard" class="hidden icon">
+      <section class="hidden choose-fighter">
+        <img src="./assets/happy-rocks.png" alt="happy-rocks" class="classic-icon icon" id="rock"> 
+        <img src="./assets/happy-paper.png" alt="happy-paper" class="classic-icon icon" id="paper">
+        <img src="./assets/happy-scissors.png" alt="happy-scissors" class="classic-icon icon" id="scissors">
+        <img src="./assets/happy-alien.png" alt="happy-alien" class="difficult-icon icon hidden" id="alien">
+        <img src="./assets/lizard.png" alt="lizard" class="difficult-icon icon hidden" id="lizard">
       </section>
-      <section class="display-game">
-        <!-- Each players choice will be displayed here-->
+      <section class="hidden display-game">
+        <div class="cat-choice"><!-- Cat's choice will be displayed here--></div>
+        <div class="dog-choice"><!-- Dog's choice will be displayed here--></div>
       </section>
     </section>
     <section class="right">
       <h1>&#128054;</h1>
       <h2>Dog</h2>
-      <h3 class="wins">Wins:</h3>
+      <h3 class="dog-wins">Wins:</h3>
     </section>
     <script src="./src/player.js"></script>
     <script src="./src/game.js"></script>
