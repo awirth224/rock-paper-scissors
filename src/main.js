@@ -66,21 +66,21 @@ function difficultGameDisplay() {
 //   currentGame.takeTurnDifficult(event.target.id)
 // }
 
-function rocks() {
-  console.log(currentGame.takeTurnClassic('rock'))
+function rocks(event) {
+  console.log(currentGame)
   if (currentGame.gameType === 'classic') {
-    currentGame.takeTurnClassic('rock')
-    displayDogChoice()
+    currentGame.takeTurnClassic(event.target.id)
+    playGame()
   }
   else if (currentGame.gameType === 'difficult') {
     currentGame.takeTurnDifficult('rock')
-    displayCatChoice()
+    playGame()
   }
   
 }
 
 function papers() {
-  takeTurnClassic('paper')
+  currentGame.cat.choice = 'paper'
 }
 
 function scissor() {
@@ -146,8 +146,10 @@ function displayChangeGameButton() {
 }
 
 function updateWinDisplay() {
-  catWins.innerHTML += `Wins: ${this.cat.wins}`
-  dogWins.innerHTML += `Wins: ${this.dog.wins}`
+  catWins.innerText = ''
+  dogWins.innerText = ''
+  catWins.innerHTML += `Wins: ${currentGame.cat.wins}`
+  dogWins.innerHTML += `Wins: ${currentGame.dog.wins}`
 }
 
 
