@@ -18,26 +18,33 @@ class Game{
   takeTurnDifficult(choice) {
     this.cat.choice = choice
     this.dog.choice = this.dog.getRandomIcon(this.optionsDifficult)
+    
   }
 
   checkWins() {
     if (this.cat.choice === 'rock' && this.dog.choice === 'scissors') {
        this.cat.wins += 1
+       return '😸 Cat Wins!'
     }
     else if (this.cat.choice === 'paper' && this.dog.choice === 'scissors') {
       this.dog.wins += 1
+      return '🐶 Dog Wins!'
     }
     else if (this.cat.choice === 'scissors' && this.dog.choice === 'paper') {
       this.cat.wins += 1
+      return '😸 Cat Wins!'
     }
     else if (this.cat.choice === 'rock' && this.dog.choice === 'paper') {
       this.dog.wins += 1
+      return '🐶 Dog Wins!'
     }
     else if (this.cat.choice === 'paper' && this.dog.choice === 'rock') {
       this.cat.wins += 1
+      return '😸 Cat Wins!'
     }
     else if (this.cat.choice === 'scissors' && this.dog.choice === 'rock') {
       this.dog.wins += 1
+      return '🐶 Dog Wins!'
     }
   }
 }
