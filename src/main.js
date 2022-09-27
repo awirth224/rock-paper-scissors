@@ -22,7 +22,6 @@ var difficultButton = document.querySelector('.play-difficult')
 var gameArea = document.querySelector('.game-area')
 
 //eventListeners
-
 classicButton.addEventListener('click', classicGameDisplay)
 difficultButton.addEventListener('click', difficultGameDisplay)
 changeGameButton.addEventListener('click', displayMainPage)
@@ -112,7 +111,6 @@ function displayBoth(event) {
     dogChoiceDisplay.innerHTML = `<img src="./assets/lizard.png" alt="lizard">`
     changingTitle.innerText = 'Cat Wins!' 
   }
-
   else if(currentGame.cat.choice === 'paper' && currentGame.dog.choice === 'rock') {
     paper.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/happy-rocks.png" alt="happy-rocks">`
@@ -138,8 +136,6 @@ function displayBoth(event) {
     dogChoiceDisplay.innerHTML = `<img src="./assets/lizard.png" alt="lizard">`
     changingTitle.innerText = 'Dog Wins!'
   }
-  
-
   else if(currentGame.cat.choice === 'scissors' && currentGame.dog.choice === 'rock') {
     scissors.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/happy-rocks.png" alt="happy-rocks">`
@@ -165,7 +161,6 @@ function displayBoth(event) {
     dogChoiceDisplay.innerHTML = `<img src="./assets/lizard.png" alt="lizard">`
     changingTitle.innerText = 'Dog Wins!'
   }
-
   else if(currentGame.cat.choice === 'alien' && currentGame.dog.choice === 'rock') {
     alien.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/happy-rocks.png" alt="happy-rocks">`
@@ -191,8 +186,6 @@ function displayBoth(event) {
     dogChoiceDisplay.innerHTML = `<img src="./assets/lizard.png" alt="lizard">`
     changingTitle.innerText = 'Cat Wins!'
   }
-
-
   else if(currentGame.cat.choice === 'lizard' && currentGame.dog.choice === 'rock') {
     lizard.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/happy-rocks.png" alt="happy-rocks">`
