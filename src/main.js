@@ -3,7 +3,7 @@ var catWins = document.querySelector('.cat-wins')
 var dogWins = document.querySelector('.dog-wins')
 var catChoiceDisplay = document.querySelector('.cat-choice')
 var dogChoiceDisplay = document.querySelector('.dog-choice')
-var changingTitle = document.querySelector('.change-game-display')
+var changingTitle = document.querySelector('.choose-game-display')
 var changeGameButton = document.querySelector('.change-game-button')
 var chooseFighter = document.querySelector('.choose-fighter')
 var playersChoices = document.querySelector('.display-choices')
@@ -228,7 +228,8 @@ function updateWinDisplay() {
 }
 
 function reset() {
-  setTimeout(displayBoth, 1500)
+  setTimeout(1500)
+
 }
 
 function playGame(event) {
