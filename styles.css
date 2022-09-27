@@ -40,7 +40,7 @@ body {
 }
 
 .change-game-display {
-  margin-bottom: 8%;
+  margin-bottom: 15%;
 }
 
 .game-area {
@@ -88,20 +88,24 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   height: 340px;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 100%;
 }
 
 img {
   height:100px;
   justify-content: space-around;
-  margin-right: 5%;
+  margin-right: 10%;
   margin-bottom: 2%;
   width: 100px;
 }
 
 img:hover {
   cursor: pointer;
+}
+
+.fighter {
+  margin-right: 5%;
 }
 
 /* Player 'Dog' section */
@@ -129,11 +133,11 @@ button {
 
 button:hover {
   background-color: rgb(247, 97, 199);
-  cursor: pointer
+  cursor: pointer;
 }
 
 .after-use {
-  cursor: none
+  cursor: none;
 }
 
 .hidden {

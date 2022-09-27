@@ -1,8 +1,8 @@
 class Game{
-  constructor() {
+  constructor(gameType) {
     this.cat = new Player('Cat', '😸')
     this.dog = new Player('Dog', '🐶')
-    this.gameType = 'difficult' || 'classic'
+    this.gameType = gameType
     this.optionsClassic = ['rock', 'paper', 'scissors']
     this.optionsDifficult = ['rock', 'paper', 'scissors', 'alien', 'lizard']
   }
@@ -26,8 +26,6 @@ class Game{
     this.cat.choice = choice 
     return this.cat.choice
   }
-
-
 
   checkWins() {
     if (this.cat.choice === 'rock' && this.dog.choice === 'rock') {
