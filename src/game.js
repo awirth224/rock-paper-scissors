@@ -5,13 +5,6 @@ class Game{
     this.gameType = gameType
     this.optionsClassic = ['rock', 'paper', 'scissors']
     this.optionsDifficult = ['rock', 'paper', 'scissors', 'alien', 'lizard']
-    this.winningCombos = {
-      rock: ['scissors', 'lizard'],
-      paper: ['rock', 'alien'],
-      scissors: ['paper','alien'],
-      alien: ['rock', 'lizard'],
-      lizard: ['paper', 'scissors']
-    }
   }
 
       /*Lizard beats paper and scissors, loses to rock and alien
@@ -33,8 +26,6 @@ class Game{
     this.cat.choice = choice 
     return this.cat.choice
   }
-
-
 
   checkWins() {
     if (this.cat.choice === 'rock' && this.dog.choice === 'rock') {
