@@ -1,11 +1,7 @@
 //querySelectors
-var catWins = document.querySelector('.cat-wins')
-var dogWins = document.querySelector('.dog-wins')
-var catChoiceDisplay = document.querySelector('.cat-choice')
-var dogChoiceDisplay = document.querySelector('.dog-choice')
-var changingTitle = document.querySelector('.choose-game-display')
+var classicButton = document.querySelector('.play-classic')
+var difficultButton = document.querySelector('.play-difficult')
 var changeGameButton = document.querySelector('.change-game-button')
-var chooseFighter = document.querySelector('.choose-fighter')
 // var classicGame = document.querySelector('.classic')
 // var difficultGame = document.querySelector('.difficult')
 var lizard = document.getElementById('lizard')
@@ -16,14 +12,20 @@ var scissors = document.getElementById('scissors')
 var allIcons = document.querySelectorAll('.icon')
 var classicIcons = document.querySelectorAll('.classic-icon')
 // var difficultIcons = document.querySelectorAll('.difficult-icon')
-var classicButton = document.querySelector('.play-classic')
-var difficultButton = document.querySelector('.play-difficult')
 var gameArea = document.querySelector('.game-area')
+var chooseFighter = document.querySelector('.choose-fighter')
+var changingTitle = document.querySelector('.choose-game-display')
+var catWins = document.querySelector('.cat-wins')
+var dogWins = document.querySelector('.dog-wins')
+var catChoiceDisplay = document.querySelector('.cat-choice')
+var dogChoiceDisplay = document.querySelector('.dog-choice')
+
 
 //eventListeners
 classicButton.addEventListener('click', classicGameDisplay)
 difficultButton.addEventListener('click', difficultGameDisplay)
 changeGameButton.addEventListener('click', displayMainPage)
+chooseFighter.addEventListener('click',)
 
 for (var i = 0; i < classicIcons.length; i++) {
   classicIcons[i].addEventListener('click', playGame)
