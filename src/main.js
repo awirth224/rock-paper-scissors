@@ -23,7 +23,7 @@ var rulesArea = document.querySelector('.rules-area')
 //eventListeners
 classicButton.addEventListener('click', classicGameDisplay)
 difficultButton.addEventListener('click', difficultGameDisplay)
-// changeGameButton.addEventListener('click', )
+changeGameButton.addEventListener('click', changeGame)
 
 for (var i = 0; i < classicIcons.length; i++) {
   classicIcons[i].addEventListener('click', playGame)
@@ -223,9 +223,12 @@ function displayBoth(event) {
 }
 
 function displayChangeGameButton() {
-  if(currentGame.dog.wins > 0 || currentGame.cat.wins > 0) {
     changeGameButton.classList.remove('hidden')
-  }
+}
+
+function changeGame() {
+  chooseFighter.classList.add('hidden')
+  rulesArea.classList.remove('hidden')
 }
 
 function updateWinDisplay() {
