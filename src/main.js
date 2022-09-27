@@ -45,6 +45,7 @@ function displayMainPage() {
   scissors.classList.add('hidden')
   alien.classList.add('hidden')
   lizard.classList.add('hidden')
+  changeGameButton.classList.add('hidden')
   changingTitle.innerText = 'Choose Your Game'
 }
 
@@ -229,7 +230,7 @@ function updateWinDisplay() {
 }
 
 function reset() {
-  setTimeout(1500)
+  setTimeout(displayBoth,1500)
 
 }
 
