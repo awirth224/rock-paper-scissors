@@ -37,35 +37,37 @@ for (var i = 0; i < allIcons.length; i++) {
 //global variables
 var currentGame = new Game()
 
-//functions
-function displayChooseFighterPage() {
-  if(currentGame.gameType === 'classic') {
-    rock.classList.remove('hidden')
-    paper.classList.remove('hidden')
-    scissors.classList.remove('hidden')
-  } else {
-    rock.classList.remove('hidden')
-    paper.classList.remove('hidden')
-    scissors.classList.remove('hidden')
-    alien.classList.remove('hidden')
-    lizard.classList.remove('hidden')
+//function
+function hideStuff(hideThis) {
+  for (var i = 0; i < hideThis.length; i++) {
+    hideThis[i].classList.add('hidden')
   }
-  changingTitle.innerText = 'Choose Your Fighter'
-  catChoiceDisplay.innerHTML = ``
-  dogChoiceDisplay.innerHTML = ``
+}
+
+function showStuff(showThis) {
+  for (var i = 0; i < showThis.length; i++) {
+    showThis[i].classList.remove('hidden')
+  }
 }
 
 function classicGameDisplay() {
-  rulesArea.classList.add('hidden')
-  chooseFighter.classList.remove('hidden')
+  hideStuff([rulesArea, alien, lizard])
+  showStuff([chooseFighter, rock, paper, scissors])
   changingTitle.innerText = 'Choose Your Fighter'
   currentGame.gameType = 'classic'
 }
 
 function difficultGameDisplay() {
+  rulesArea.classList.add('hidden')
+  chooseFighter.classList.remove('hidden')
   lizard.classList.remove('hidden')
   alien.classList.remove('hidden')
-  classicGameDisplay()
+  rock.classList.remove('hidden')
+  paper.classList.remove('hidden')
+  scissors.classList.remove('hidden')
+  // catChoiceDisplay.innerHTML = ``
+  // dogChoiceDisplay.innerHTML = ``
+  changingTitle.innerText = 'Choose Your Fighter'
   currentGame.gameType = 'difficult'
 }
 
@@ -218,14 +220,16 @@ function displayBoth(event) {
     catChoiceDisplay.innerHTML = `<img src="./assets/lizard.png" alt="lizard" class="after-use" id="lizard">`
     dogChoiceDisplay.innerHTML = `<img src="./assets/lizard.png" alt="lizard" class="after-use" id="lizard">`
     changingTitle.innerText = 'It\'s a Draw!'
-  }
+  } 
 }
 
 function displayChangeGameButton() {
-    changeGameButton.classList.remove('hidden')
+  // displayChooseFighterPage()
+  changeGameButton.classList.remove('hidden')
 }
 
 function changeGame() {
+  currentGame.gameType = ''
   chooseFighter.classList.add('hidden')
   rulesArea.classList.remove('hidden')
 }
@@ -239,8 +243,7 @@ function updateWinDisplay() {
 }
 
 function reset() {
-  setTimeout(displayChooseFighterPage, 1000)
-  
+  setTimeout(displayChooseFighterPage, 1200)
 }
 
 function playGame(event) {
@@ -248,4 +251,24 @@ function playGame(event) {
   updateWinDisplay()
   displayChangeGameButton()
   reset()
+}
+
+//functions
+function displayChooseFighterPage() {
+  if(currentGame.gameType === 'classic') {
+    rock.classList.remove('hidden')
+    paper.classList.remove('hidden')
+    scissors.classList.remove('hidden')
+    alien.classList.add('hidden')
+    lizard.classList.add('hidden')
+  } else {
+    rock.classList.remove('hidden')
+    paper.classList.remove('hidden')
+    scissors.classList.remove('hidden')
+    alien.classList.remove('hidden')
+    lizard.classList.remove('hidden')
+  }
+  changingTitle.innerText = 'Choose Your Fighter'
+  catChoiceDisplay.innerHTML = ``
+  dogChoiceDisplay.innerHTML = ``
 }
