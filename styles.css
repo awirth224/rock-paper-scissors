@@ -2,9 +2,13 @@ body {
   background: rgb(169,57,226);
   background: radial-gradient(circle, rgba(169,57,226,1) 5%, rgba(204,115,230,1) 82%);
   display: grid;
-  color: #fff;
   grid-template-columns: repeat(3, 20% 60% 20%);
   height: 100vh;
+}
+
+.font {
+  font-family: 'Quicksand', sans-serif;
+  color: #fff;
 }
 
  /* Player 'Cat' section */
