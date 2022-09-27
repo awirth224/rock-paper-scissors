@@ -28,7 +28,6 @@ button {
 
 /* Main section */
 .middle {
-  border: solid 3px green;
   align-items: center;
   display: flex;
   flex-direction: column;
