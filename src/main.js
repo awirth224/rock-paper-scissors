@@ -18,12 +18,12 @@ var classicIcons = document.querySelectorAll('.classic-icon')
 // var difficultIcons = document.querySelectorAll('.difficult-icon')
 var classicButton = document.querySelector('.play-classic')
 var difficultButton = document.querySelector('.play-difficult')
-var gameArea = document.querySelector('.game-area')
+var rulesArea = document.querySelector('.rules-area')
 
 //eventListeners
 classicButton.addEventListener('click', classicGameDisplay)
 difficultButton.addEventListener('click', difficultGameDisplay)
-changeGameButton.addEventListener('click', displayMainPage)
+// changeGameButton.addEventListener('click', )
 
 for (var i = 0; i < classicIcons.length; i++) {
   classicIcons[i].addEventListener('click', playGame)
@@ -37,20 +37,27 @@ for (var i = 0; i < allIcons.length; i++) {
 var currentGame = new Game()
 
 //functions
-function displayMainPage() {
-  gameArea.classList.remove('hidden')
-  chooseFighter.classList.add('hidden')
-  rock.classList.add('hidden')
-  paper.classList.add('hidden')
-  scissors.classList.add('hidden')
-  alien.classList.add('hidden')
-  lizard.classList.add('hidden')
-  changeGameButton.classList.add('hidden')
-  changingTitle.innerText = 'Choose Your Game'
+function displayChooseFighterPage() {
+if(currentGame.gameType === 'classic') {
+  rock.classList.remove('hidden')
+  paper.classList.remove('hidden')
+  scissors.classList.remove('hidden')
+  // changeGameButton.classList.add('hidden')
+} else {
+  rock.classList.remove('hidden')
+  paper.classList.remove('hidden')
+  scissors.classList.remove('hidden')
+  alien.classList.remove('hidden')
+  lizard.classList.remove('hidden')
+  // changeGameButton.classList.add('hidden')
+}
+  changingTitle.innerText = 'Choose Your Fighter'
+  catChoiceDisplay.innerHTML = ``
+  dogChoiceDisplay.innerHTML = ``
 }
 
 function classicGameDisplay() {
-  gameArea.classList.add('hidden')
+  rulesArea.classList.add('hidden')
   chooseFighter.classList.remove('hidden')
   changingTitle.innerText = 'Choose Your Fighter'
   currentGame.gameType = 'classic'
@@ -230,8 +237,8 @@ function updateWinDisplay() {
 }
 
 function reset() {
-  setTimeout(displayBoth,1500)
-
+  setTimeout(displayChooseFighterPage, 1000)
+  
 }
 
 function playGame(event) {
