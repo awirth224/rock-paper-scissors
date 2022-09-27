@@ -13,11 +13,13 @@ class Game{
   takeTurnDog() { 
     var randomIcon = this.dog.getRandomIcon(this.optionsClassic)
     this.dog.choice = this.optionsClassic[randomIcon]
+    return this.dog.choice
   }
 
   takeTurnDogDifficult() {
     var randomIcon = this.dog.getRandomIcon(this.optionsDifficult) 
     this.dog.choice = this.optionsDifficult[randomIcon]
+    return this.dog.choice
   }
 
   takeTurnCat(choice) {
