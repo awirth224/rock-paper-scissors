@@ -25,6 +25,7 @@ var gameArea = document.querySelector('.game-area')
 
 classicButton.addEventListener('click', classicGameDisplay)
 difficultButton.addEventListener('click', difficultGameDisplay)
+changeGameButton.addEventListener('click', displayMainPage)
 
 for (var i = 0; i < classicIcons.length; i++) {
   classicIcons[i].addEventListener('click', playGame)
@@ -34,16 +35,21 @@ for (var i = 0; i < allIcons.length; i++) {
   allIcons[i].addEventListener('click', playGame)
 }
 
-// rock.addEventListener('click', rocks)
-// paper.addEventListener('click', papers, playGame)
-// scissors.addEventListener('click',scissor, playGame)
-// alien.addEventListener('click', aliens, playGame)
-// lizard.addEventListener('click', lizards, playGame)
-
 //global variables
 var currentGame = new Game()
 
 //functions
+function displayMainPage() {
+  gameArea.classList.remove('hidden')
+  chooseFighter.classList.add('hidden')
+  rock.classList.add('hidden')
+  paper.classList.add('hidden')
+  scissors.classList.add('hidden')
+  alien.classList.add('hidden')
+  lizard.classList.add('hidden')
+  changingTitle.innerText = 'Choose Your Game'
+}
+
 function classicGameDisplay() {
   gameArea.classList.add('hidden')
   chooseFighter.classList.remove('hidden')
@@ -229,7 +235,7 @@ function updateWinDisplay() {
 }
 
 function reset() {
-  setTimeout(displayBoth, 2000)
+  setTimeout(displayBoth, 1500)
 }
 
 function playGame(event) {
