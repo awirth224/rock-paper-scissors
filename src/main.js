@@ -212,6 +212,15 @@ function displayBoth(event) {
     dogChoiceDisplay.innerHTML = `<img src="./assets/lizard.png" alt="lizard">`
     changingTitle.innerText = 'It\'s a Draw!'
   }
+  disableCursor()
+}
+
+function disableCursor() {
+  rock.classList.add('after-use')
+  paper.classList.add('after-use')
+  scissors.classList.add('after-use')
+  alien.classList.add('after-use')
+  lizard.classList.add('after-use')
 }
 
 function displayChangeGameButton() {
