@@ -48,7 +48,7 @@ button {
 }
 
 .game-area {
-  align-content: center;
+  align-content: flex-start;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -56,24 +56,27 @@ button {
 
 .classic {
   align-items: center;
-  background-color: rebeccapurple;
+  background-color: blueviolet;
   display:flex;
   flex-direction: column;
-  font-size: 18px;
-  height: 220px;
-  justify-content: center;
+  font-size: 14px;
+  height: 180px;
+  justify-content: flex-start;
   margin-bottom: 6%;
   width: 230px;
+}
+
+.play-classic {
+  margin-top: 3%;
 }
 
 .difficult {
   align-items: center;
   background-color: blueviolet;
-  border: solid 3px rebeccapurple;
   display: flex;
   flex-direction: column;
-  font-size: 18px;
-  height: 240px;
+  font-size: 14px;
+  height: 220px;
   justify-content: flex-start;
   margin-bottom: 5%;
   width: 230px;
