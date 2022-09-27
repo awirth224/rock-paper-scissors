@@ -149,12 +149,12 @@ function displayBoth(event) {
   else if(currentGame.cat.choice === 'scissors' && currentGame.dog.choice === 'rock') {
     catChoiceDisplay.innerHTML = `<img src="./assets/happy-scissors.png" alt="happy-scissors" class="after-use" id="scissors">`
     dogChoiceDisplay.innerHTML = `<img src="./assets/happy-rocks.png" alt="happy-rocks" class="after-use" id="rock">`
-    changingTitle.innerText = 'Cat Wins!'
+    changingTitle.innerText = 'Dog Wins!'
   }
   else if(currentGame.cat.choice === 'scissors' && currentGame.dog.choice === 'paper') {
     catChoiceDisplay.innerHTML = `<img src="./assets/happy-scissors.png" alt="happy-scissors" class="after-use" id="scissors">`
     dogChoiceDisplay.innerHTML = `<img src="./assets/happy-paper.png" alt="happy-paper" class="after-use" id="paper">`
-    changingTitle.innerText = 'Dog Wins!'
+    changingTitle.innerText = 'Cat Wins!'
   }
   else if(currentGame.cat.choice === 'scissors' && currentGame.dog.choice === 'scissors') {
     catChoiceDisplay.innerHTML = `<img src="./assets/happy-scissors.png" alt="happy-scissors" class="after-use" id="scissors">`
