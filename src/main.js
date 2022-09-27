@@ -107,28 +107,28 @@ function displayBoth(event) {
   else if(currentGame.cat.choice === 'rock' && currentGame.dog.choice === 'paper') {
     rock.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/happy-paper.png" alt="happy-paper">`
-    changingTitle.innerText = '🐶 Dog Wins!' 
+    changingTitle.innerText = 'Dog Wins!'
   }
   else if(currentGame.cat.choice === 'rock' && currentGame.dog.choice === 'scissors') {
     rock.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/happy-scissors.png" alt="happy-scissors">`
-    changingTitle.innerText = '😸 Cat Wins!'
+    changingTitle.innerText = 'Cat Wins!'
   } 
   else if(currentGame.cat.choice === 'rock' && currentGame.dog.choice === 'alien') {
     rock.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/happy-alien.png" alt="happy-alien">`
-    changingTitle.innerText = '🐶 Dog Wins!' 
+    changingTitle.innerText = 'Dog Wins!' 
   }
   else if(currentGame.cat.choice === 'rock' && currentGame.dog.choice === 'lizard') {
     rock.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/lizard.png" alt="lizard">`
-    changingTitle.innerText = '😸 Cat Wins!' 
+    changingTitle.innerText = 'Cat Wins!' 
   }
 
   else if(currentGame.cat.choice === 'paper' && currentGame.dog.choice === 'rock') {
     paper.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/happy-rocks.png" alt="happy-rocks">`
-    changingTitle.innerText = '😸 Cat Wins!'
+    changingTitle.innerText = 'Cat Wins!'
   }
   else if(currentGame.cat.choice === 'paper' && currentGame.dog.choice === 'paper') {
     paper.classList.remove('hidden')
@@ -138,29 +138,29 @@ function displayBoth(event) {
   else if(currentGame.cat.choice === 'paper' && currentGame.dog.choice === 'scissors') {
     paper.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/happy-scissors.png" alt="happy-scissors">`
-    changingTitle.innerText = '🐶 Dog Wins!'
+    changingTitle.innerText = 'Dog Wins!'
   }
   else if(currentGame.cat.choice === 'paper' && currentGame.dog.choice === 'alien') {
     paper.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/happy-alien.png" alt="happy-alien">`
-    changingTitle.innerText = '😸 Cat Wins!'
+    changingTitle.innerText = 'Cat Wins!'
   }
   else if(currentGame.cat.choice === 'paper' && currentGame.dog.choice === 'lizard') {
     paper.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/lizard.png" alt="lizard">`
-    changingTitle.innerText = '🐶 Dog Wins!'
+    changingTitle.innerText = 'Dog Wins!'
   }
   
 
   else if(currentGame.cat.choice === 'scissors' && currentGame.dog.choice === 'rock') {
     scissors.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/happy-rocks.png" alt="happy-rocks">`
-    changingTitle.innerText = '😸 Cat Wins!'
+    changingTitle.innerText = 'Cat Wins!'
   }
   else if(currentGame.cat.choice === 'scissors' && currentGame.dog.choice === 'paper') {
     scissors.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/happy-paper.png" alt="happy-paper">`
-    changingTitle.innerText = '🐶 Dog Wins!'
+    changingTitle.innerText = 'Dog Wins!'
   }
   else if(currentGame.cat.choice === 'scissors' && currentGame.dog.choice === 'scissors') {
     scissors.classList.remove('hidden')
@@ -170,28 +170,28 @@ function displayBoth(event) {
   else if(currentGame.cat.choice === 'scissors' && currentGame.dog.choice === 'alien') {
     scissors.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/happy-alien.png" alt="happy-alien">`
-    changingTitle.innerText = '😸 Cat Wins!'
+    changingTitle.innerText = 'Cat Wins!'
   }
   else if(currentGame.cat.choice === 'scissors' && currentGame.dog.choice === 'lizard') {
     scissors.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/lizard.png" alt="lizard">`
-    changingTitle.innerText = '🐶 Dog Wins!'
+    changingTitle.innerText = 'Dog Wins!'
   }
 
   else if(currentGame.cat.choice === 'alien' && currentGame.dog.choice === 'rock') {
     alien.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/happy-rocks.png" alt="happy-rocks">`
-    changingTitle.innerText = '😸 Cat Wins!'
+    changingTitle.innerText = 'Cat Wins!'
   }
   else if(currentGame.cat.choice === 'alien' && currentGame.dog.choice === 'paper') {
     alien.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/happy-paper.png" alt="happy-paper">`
-    changingTitle.innerText = '🐶 Dog Wins!'
+    changingTitle.innerText = 'Dog Wins!'
   }
   else if(currentGame.cat.choice === 'alien' && currentGame.dog.choice === 'scissors') {
     alien.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/happy-scissors.png" alt="happy-scissors">`
-    changingTitle.innerText = '🐶 Dog Wins!'
+    changingTitle.innerText = 'Dog Wins!'
   }
   else if(currentGame.cat.choice === 'alien' && currentGame.dog.choice === 'alien') {
     alien.classList.remove('hidden')
@@ -201,29 +201,29 @@ function displayBoth(event) {
   else if(currentGame.cat.choice === 'alien' && currentGame.dog.choice === 'lizard') {
     alien.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/lizard.png" alt="lizard">`
-    changingTitle.innerText = '😸 Cat Wins!'
+    changingTitle.innerText = 'Cat Wins!'
   }
 
 
   else if(currentGame.cat.choice === 'lizard' && currentGame.dog.choice === 'rock') {
     lizard.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/happy-rocks.png" alt="happy-rocks">`
-    changingTitle.innerText = '🐶 Dog Wins!'
+    changingTitle.innerText = 'Dog Wins!'
   }
   else if(currentGame.cat.choice === 'lizard' && currentGame.dog.choice === 'paper') {
     lizard.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/happy-paper.png" alt="happy-paper">`
-    changingTitle.innerText = '😸 Cat Wins!'
+    changingTitle.innerText = 'Cat Wins!'
   }
   else if(currentGame.cat.choice === 'lizard' && currentGame.dog.choice === 'scissors') {
     lizard.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/happy-scissors.png" alt="happy-scissors">`
-    changingTitle.innerText = '😸 Cat Wins!'
+    changingTitle.innerText = 'Cat Wins!'
   }
   else if(currentGame.cat.choice === 'lizard' && currentGame.dog.choice === 'alien') {
     lizard.classList.remove('hidden')
     dogChoiceDisplay.innerHTML = `<img src="./assets/happy-alien.png" alt="happy-alien">`
-    changingTitle.innerText = '🐶 Dog Wins!'
+    changingTitle.innerText = 'Dog Wins!'
   }
   else if(currentGame.cat.choice === 'lizard' && currentGame.dog.choice === 'lizard') {
     lizard.classList.remove('hidden')
