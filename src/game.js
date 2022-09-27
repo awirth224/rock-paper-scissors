@@ -1,5 +1,5 @@
 class Game{
-  constructor(gameType) {
+  constructor() {
     this.cat = new Player('Cat', '😸')
     this.dog = new Player('Dog', '🐶')
     this.gameType = 'difficult' || 'classic'
@@ -10,23 +10,67 @@ class Game{
       /*Lizard beats paper and scissors, loses to rock and alien
       Alien beats lizard and rock, loses to paper and scissors */
 
-  takeTurnClassic(choice) {
-    this.cat.choice = choice 
-    this.dog.choice = this.dog.getRandomIcon(this.optionsClassic)
+  takeTurnDog() { 
+    var randomIcon = this.dog.getRandomIcon(this.optionsClassic)
+    this.dog.choice = this.optionsClassic[randomIcon]
+    return this.dog.choice
   }
 
-  takeTurnDifficult(choice) {
-    this.cat.choice = choice
-    this.dog.choice = this.dog.getRandomIcon(this.optionsDifficult)
-    
+  takeTurnDogDifficult() {
+    var randomIcon = this.dog.getRandomIcon(this.optionsDifficult) 
+    this.dog.choice = this.optionsDifficult[randomIcon]
+    return this.dog.choice
   }
+
+  takeTurnCat(choice) {
+    this.cat.choice = choice 
+    return this.cat.choice
+  }
+
+
 
   checkWins() {
-    if (this.cat.choice === 'rock' && this.dog.choice === 'scissors') {
-       this.cat.wins += 1
-       return '😸 Cat Wins!'
+    if (this.cat.choice === 'rock' && this.dog.choice === 'rock') {
+       return 'It\'s a Draw!'
+    }
+    else if (this.cat.choice === 'rock' && this.dog.choice === 'paper') {
+      this.dog.wins += 1
+      return '🐶 Dog Wins!'
+    }
+    else if (this.cat.choice === 'rock' && this.dog.choice === 'scissors') {
+      this.cat.wins += 1
+      return '😸 Cat Wins!'
+    }
+    else if (this.cat.choice === 'rock' && this.dog.choice === 'alien') {
+      this.dog.wins += 1
+      return '🐶 Dog Wins!'
+    }
+    else if (this.cat.choice === 'rock' && this.dog.choice === 'lizard') {
+      this.cat.wins += 1
+      return '😸 Cat Wins!'
+    }
+
+    else if (this.cat.choice === 'paper' && this.dog.choice === 'rock') {
+      this.cat.wins += 1
+      return '😸 Cat Wins!'
+    }
+    else if (this.cat.choice === 'paper' && this.dog.choice === 'paper') {
+      return 'It\'s a Draw!'
     }
     else if (this.cat.choice === 'paper' && this.dog.choice === 'scissors') {
+      this.dog.wins += 1
+      return '🐶 Dog Wins!'
+    }
+    else if (this.cat.choice === 'paper' && this.dog.choice === 'alien') {
+      this.cat.wins += 1
+      return '😸 Cat Wins!'
+    }
+    else if (this.cat.choice === 'paper' && this.dog.choice === 'lizard') {
+      this.dog.wins += 1
+      return '🐶 Dog Wins!'
+    }
+
+    else if (this.cat.choice === 'scissors' && this.dog.choice === 'rock') {
       this.dog.wins += 1
       return '🐶 Dog Wins!'
     }
@@ -34,17 +78,56 @@ class Game{
       this.cat.wins += 1
       return '😸 Cat Wins!'
     }
-    else if (this.cat.choice === 'rock' && this.dog.choice === 'paper') {
-      this.dog.wins += 1
-      return '🐶 Dog Wins!'
+    else if (this.cat.choice === 'scissors' && this.dog.choice === 'scissors') {
+      return 'It\'s a Draw!'
     }
-    else if (this.cat.choice === 'paper' && this.dog.choice === 'rock') {
+    else if (this.cat.choice === 'scissors' && this.dog.choice === 'alien') {
       this.cat.wins += 1
       return '😸 Cat Wins!'
     }
-    else if (this.cat.choice === 'scissors' && this.dog.choice === 'rock') {
+    else if (this.cat.choice === 'scissors' && this.dog.choice === 'lizard') {
       this.dog.wins += 1
       return '🐶 Dog Wins!'
+    }
+
+    else if (this.cat.choice === 'alien' && this.dog.choice === 'rock') {
+      this.cat.wins += 1
+      return '😸 Cat Wins!'
+    }
+    else if (this.cat.choice === 'alien' && this.dog.choice === 'paper') {
+      this.dog.wins += 1
+      return '🐶 Dog Wins!'
+    }
+    else if (this.cat.choice === 'alien' && this.dog.choice === 'scissors') {
+      this.dog.wins += 1
+      return '🐶 Dog Wins!'
+    }
+    else if (this.cat.choice === 'alien' && this.dog.choice === 'alien') {
+      return 'It\'s a Draw!'
+    }
+    else if (this.cat.choice === 'alien' && this.dog.choice === 'lizard') {
+      this.cat.wins += 1
+      return '😸 Cat Wins!'
+    }
+
+    else if (this.cat.choice === 'lizard' && this.dog.choice === 'rock') {
+      this.dog.wins += 1
+      return '🐶 Dog Wins!'
+    }
+    else if (this.cat.choice === 'lizard' && this.dog.choice === 'paper') {
+      this.cat.wins += 1
+      return '😸 Cat Wins!'
+    }
+    else if (this.cat.choice === 'lizard' && this.dog.choice === 'scissors') {
+      this.cat.wins += 1
+      return '😸 Cat Wins!'
+    }
+    else if (this.cat.choice === 'lizard' && this.dog.choice === 'alien') {
+      this.dog.wins += 1
+      return '🐶 Dog Wins!'
+    }
+    else if (this.cat.choice === 'lizard' && this.dog.choice === 'lizard') {
+      return 'It\'s a Draw!'
     }
   }
 }

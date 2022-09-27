@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <title>Rock Paper Scissors</title>
   </head>
   <body>
@@ -13,7 +14,7 @@
     </section>
     <section class="middle">
       <h1 class="title">Rock, Paper, Scissors</h1>
-      <h2 class="change-game-display">Choose Your Game</h2>
+      <h2 class="choose-game-display">Choose Your Game!</h2>
       <section class="game-area">
         <div class="classic">
           <h3 class="game-type">Classic Game</h3>
@@ -22,7 +23,7 @@
             scissors > paper <br>
             paper > rock <br>
           </p>
-          <button class="play-classic">Play Classic!</button>
+          <button class="play-classic play">Play Classic</button>
         </div>
         <div class="difficult">
           <h3 class="game-type">Difficult Game</h3>
@@ -33,7 +34,7 @@
             alien > rock & lizard <br>
             lizard > scissors & paper
           </p>
-          <button class="play-difficult">Play Difficult</button>
+          <button class="play-difficult play">Play Difficult</button>
         </div>
       </section>
       <section class="hidden choose-fighter">
@@ -42,10 +43,8 @@
         <img src="./assets/happy-scissors.png" alt="happy-scissors" class="classic-icon icon" id="scissors">
         <img src="./assets/happy-alien.png" alt="happy-alien" class="difficult-icon icon hidden" id="alien">
         <img src="./assets/lizard.png" alt="lizard" class="difficult-icon icon hidden" id="lizard">
-      </section>
-      <section class="hidden display-choices">
-        <div class="cat-choice"><!-- Cat's choice will be displayed here--></div>
-        <div class="dog-choice"><!-- Dog's choice will be displayed here--></div>
+        <div class="cat-choice hidden"><!--Cat choice here--></div>
+        <div class="dog-choice hidden"><!-- Dog Choice goes here--></div>
       </section>
     </section>
     <section class="right">

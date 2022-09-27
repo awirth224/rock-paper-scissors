@@ -1,7 +1,9 @@
 body {
   background: rgb(169,57,226);
   background: radial-gradient(circle, rgba(169,57,226,1) 5%, rgba(204,115,230,1) 82%);
+  color: #fff;
   display: grid;
+  font-family: 'Quicksand', sans-serif;
   grid-template-columns: repeat(3, 20% 60% 20%);
   height: 100vh;
 }
@@ -9,71 +11,67 @@ body {
  /* Player 'Cat' section */
 .left {
   align-items: center;
-  border: solid 3px purple;
+  background-color: rgb(198, 140, 245);
   display: flex;
   flex-direction: column;
   grid-column-start: 1;
-  grid-row-start: 1;
+  height: 100vh;
   justify-content: flex-start;
 }
 
-button {
-  border: solid 1px black;
-  border-radius: 5px;
-  height: 40px;
-  /* margin-top: 200px; */
-  width: 150px
+.change-game-button {
+  margin-top: 25%;
 }
-
 
 /* Main section */
 .middle {
-  border: solid 3px green;
   align-items: center;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   grid-column-start: 2;
+  height: 100vh;
 }
 
 .title {
-  font-size: 40px;
-  margin-bottom: 2%;
+  font-size: 50px;
+  margin-top: 2%;
+  margin-bottom: 0%;
 }
 
 .change-game-display {
-  font-size: 30px;
-  margin-bottom: 5%;
+  margin-bottom: 8%;
 }
 
 .game-area {
-  align-content: center;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+
 }
 
 .classic {
   align-items: center;
   background-color: blueviolet;
-  border: solid 3px rebeccapurple;
   display:flex;
   flex-direction: column;
-  font-size: 18px;
-  height: 220px;
-  justify-content: center;
+  font-size: 14px;
+  height: 190px;
+  justify-content: flex-start;
   margin-bottom: 6%;
   width: 230px;
+}
+
+.play {
+  margin-top: 5%;
 }
 
 .difficult {
   align-items: center;
   background-color: blueviolet;
-  border: solid 3px rebeccapurple;
   display: flex;
   flex-direction: column;
-  font-size: 18px;
-  height: 240px;
+  font-size: 14px;
+  height: 230px;
   justify-content: flex-start;
   margin-bottom: 5%;
   width: 230px;
@@ -102,14 +100,40 @@ img {
   width: 100px;
 }
 
+img:hover {
+  cursor: pointer;
+}
+
 /* Player 'Dog' section */
 .right {
   align-items: center;
-  border: solid 3px purple;
+  background-color: rgb(198, 140, 245);
   display: flex;
   flex-direction: column;
   grid-column-start: 3;
   justify-content: flex-start;
+  height: 100vh;
+}
+
+/* Across multiple sections*/
+h2 {
+  font-size: 35px;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 150px
+}
+
+button:hover {
+  background-color: rgb(247, 97, 199);
+  cursor: pointer
+}
+
+.after-use {
+  cursor: none
 }
 
 .hidden {

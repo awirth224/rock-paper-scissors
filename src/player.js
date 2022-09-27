@@ -1,13 +1,13 @@
 class Player {
-  constructor(name, token, choice) {
+  constructor(name, token) {
     this.playerName = name
     this.token = token
     this.wins = 0
-    this.choice = choice
+    this.choice = ''
   }
 
   getRandomIcon(array) {
-    Math.floor(Math.random() * array.length)
+    return Math.floor(Math.random() * array.length)
   }
 
 }
