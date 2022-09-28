@@ -7,9 +7,6 @@ class Game{
     this.optionsDifficult = ['rock', 'paper', 'scissors', 'alien', 'lizard']
   }
 
-      /*Lizard beats paper and scissors, loses to rock and alien
-      Alien beats lizard and rock, loses to paper and scissors */
-
   takeTurnDog() { 
     var randomIcon = this.dog.getRandomIcon(this.optionsClassic)
     this.dog.choice = this.optionsClassic[randomIcon]
