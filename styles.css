@@ -83,7 +83,6 @@ body {
 
 .choose-fighter {
   align-content: center;
-  /* border: solid 3px rebeccapurple; */
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
