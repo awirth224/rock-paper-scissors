@@ -62,8 +62,6 @@ function difficultGameDisplay() {
   rock.classList.remove('hidden')
   paper.classList.remove('hidden')
   scissors.classList.remove('hidden')
-  // catChoiceDisplay.innerHTML = ``
-  // dogChoiceDisplay.innerHTML = ``
   changingTitle.innerText = 'Choose Your Fighter'
   currentGame.gameType = 'difficult'
 }
@@ -221,7 +219,6 @@ function displayBoth(event) {
 }
 
 function displayChangeGameButton() {
-  // displayChooseFighterPage()
   changeGameButton.classList.remove('hidden')
 }
 
@@ -250,7 +247,6 @@ function playGame(event) {
   reset()
 }
 
-//functions
 function displayChooseFighterPage() {
   if(currentGame.gameType === 'classic') {
     rock.classList.remove('hidden')
